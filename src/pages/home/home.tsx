@@ -12,24 +12,27 @@ const Home: React.FC = () => {
             id: 1,
             title: 'Aprender',
             description: 'coisas importantes',
-            done: false
+            done: false,
+            age:'21'
         },
         {
             id: 2,
             title: 'Aprender Java',
             description: 'Mudar carreira',
-            done: true
+            done: true,
+            age:'21'
         },
         {
             id: 3,
             title: 'Aprender react',
             description: 'Mais vagas',
-            done: false
+            done: false,
+            age:'21'
         },
 
     ]);
 
-    const handlerAddTask = (title: string, description: string) => {
+    const handlerAddTask = (title: string, description: string, age:string) => {
         if (title.trim().length == 0 || description.trim().length == 0) {
             return;
         }
@@ -38,7 +41,8 @@ const Home: React.FC = () => {
             id: myTasks.length + 1,
             title: title,
             description: description,
-            done: false
+            done: false,
+            age:age
         }
 
         setMyTasks([...myTasks, newTask]);
